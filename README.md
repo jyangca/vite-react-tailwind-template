@@ -55,6 +55,7 @@ module.exports = {
 #### Create a `.prettierrc` and add the following content.
 ```json
 {
+    "plugins": ["prettier-plugin-tailwindcss"],
     "singleQuote": true,
     "semi": true,
     "tabWidth": 2,
@@ -94,7 +95,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
